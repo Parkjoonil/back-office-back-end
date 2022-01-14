@@ -6,8 +6,13 @@ export namespace IMenuDTO {
         export interface Menu {
             id: number;
             name: string;
-            createdAt: Date;
-            updatedAt: Date;
+            icon: string;
+            
         }
+
+        export interface MenuDetail {
+            name: string,
+            url: string
+          }
     }
 }

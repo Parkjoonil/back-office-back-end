@@ -1,4 +1,4 @@
-import { IMenuModel } from 'src/interface/models/menu.model';
+import { IMenuModel, MenuDetail } from 'src/interface/models/menu.model';
 import {
     BaseEntity,
     Column,
@@ -13,8 +13,11 @@ export class MenuEntity extends BaseEntity implements IMenuModel {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ nullable: false })
+    @Column({ nullable: false})
     name: string;
+
+    @Column({ nullable: false })
+    icon: string;
 
     @CreateDateColumn()
     createdAt: Date;

@@ -7,7 +7,11 @@ import { MenuService } from './menu.service';
 @ApiTags('메뉴')
 export class MenuController {
 
-    constructor(private menuService: MenuService) {}
+    constructor(
+        private menuService: MenuService
+    ) {
+        
+    }
 
     @Get()
     @ApiOperation({
