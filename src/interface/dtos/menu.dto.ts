@@ -7,12 +7,14 @@ export namespace IMenuDTO {
             id: number;
             name: string;
             icon: string;
-            
+            // detail: MenuDetail[];
         }
 
-        export interface MenuDetail {
-            name: string,
-            url: string
-          }
+        
     }
+
+    interface MenuDetail {
+        name: string,
+        url: string
+      }
 }

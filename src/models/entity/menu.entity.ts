@@ -19,6 +19,9 @@ export class MenuEntity extends BaseEntity implements IMenuModel {
     @Column({ nullable: false })
     icon: string;
 
+    // @Column({ nullable: false})
+    // detail: MenuDetail[];
+
     @CreateDateColumn()
     createdAt: Date;
 
