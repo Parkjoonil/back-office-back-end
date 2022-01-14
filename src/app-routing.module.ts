@@ -12,6 +12,7 @@ const routes: Routes = [
 @Module({
     imports: [
         RouterModule.register(routes),
+        MenuModule
     ],
     exports: [RouterModule]
 })

@@ -2,11 +2,11 @@ import { Controller, Get } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { IMenuDTO } from 'src/interface/dtos/menu.dto';
 import { MenuService } from './menu.service';
-import { plainToClass } from 'class-transformer';
 
 @Controller()
 @ApiTags('메뉴')
 export class MenuController {
+
     constructor(private menuService: MenuService) {}
 
     @Get()
