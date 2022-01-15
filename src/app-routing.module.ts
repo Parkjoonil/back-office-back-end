@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@nestjs/core';
 import { MenuModule } from './menu/menu.module';
 import { ProjectModule } from './project/project.module';
 import { ShareidModule } from './shareid/shareid.module';
+import { ShareinfoModule } from './shareinfo/shareinfo.module';
 
 const routes: Routes = [
     {
@@ -17,6 +18,11 @@ const routes: Routes = [
         path: 'shareid',
         module: ShareidModule
     },
+    {
+        path: 'shareinfo',
+        module: ShareinfoModule
+    },
+    
 ];
 
 @Module({
@@ -24,7 +30,8 @@ const routes: Routes = [
         RouterModule.register(routes),
         MenuModule,
         ProjectModule,
-        ShareidModule
+        ShareidModule,
+        ShareinfoModule
     ],
     exports: [RouterModule]
 })

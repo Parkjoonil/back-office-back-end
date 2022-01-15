@@ -18,7 +18,7 @@ export class EnvironmentService {
             password: this.configService.get('DB_PASSWORD'),
             database: this.configService.get('DB_NAME'),
             synchronize: this.configService.get<boolean>('DB_SYNC'),
-            logging: false,
+            logging: true,
             logger: 'advanced-console',
             timezone: '+09:00',
             entities: ['dist/models/**/*.entity.{ts,js}', '/opt/social-media-macro/social-media-macro-backend/dist/models/entity/**/*.entity.{ts,js}'],

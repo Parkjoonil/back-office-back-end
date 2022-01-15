@@ -1,12 +1,13 @@
-import { IMenuModel, MenuDetail } from 'src/interface/models/menu.model';
+import { IMenuModel } from 'src/interface/models/menu.model';
 import {
     BaseEntity,
     Column,
     CreateDateColumn,
     DeleteDateColumn,
-    Entity, PrimaryGeneratedColumn,
+    Entity, OneToMany, PrimaryGeneratedColumn,
     UpdateDateColumn
 } from 'typeorm';
+import { MenuDetailEntity } from './menu-detail.entity';
 
 @Entity({ name: 'menu' })
 export class MenuEntity extends BaseEntity implements IMenuModel {
@@ -19,8 +20,8 @@ export class MenuEntity extends BaseEntity implements IMenuModel {
     @Column({ nullable: false })
     icon: string;
 
-    // @Column({ nullable: false})
-    // detail: MenuDetail[];
+    @OneToMany(() => MenuDetailEntity, detail => detail.menu)
+    details: MenuDetailEntity[];
 
     @CreateDateColumn()
     createdAt: Date;

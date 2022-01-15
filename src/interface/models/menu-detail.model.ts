@@ -1,13 +1,8 @@
-export interface IMenuModel {
+export interface IMenuDetailModel {
     id: number;
     name: string;
-    icon: string;
-    // detail: MenuDetail[];
+    url: string;
     createdAt: Date;
     updatedAt: Date;
     deletedAt: Date;
-
-    
-    
-}
-
+  }

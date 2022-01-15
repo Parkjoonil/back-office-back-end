@@ -5,7 +5,9 @@ import { MenuEntity } from 'src/models/entity/menu.entity';
 export class MenuService {
     
     async getMenu(): Promise<MenuEntity[]> {
-        const menu = await MenuEntity.find();
+        const menu = await MenuEntity.find({
+            relations: ['details']
+        });
 
         return menu;
     }

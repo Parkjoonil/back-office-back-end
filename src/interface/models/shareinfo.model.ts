@@ -1,13 +1,11 @@
-export interface IMenuModel {
+export interface IShareinfoModel {
     id: number;
     name: string;
-    icon: string;
-    // detail: MenuDetail[];
+    information: string;
+    color: string;
+    type: string;
     createdAt: Date;
     updatedAt: Date;
     deletedAt: Date;
-
-    
-    
 }
-
+  
