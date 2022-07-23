@@ -36,7 +36,7 @@ export class CalendarController {
             @Query('month') month: string,
             @Query('employeeid') employeeid: number,
         ): Promise<ICalendarDTO.Response.Calendar[]>{
-       
+        console.log(year, month, employeeid)
         const calendars = await this.calendarService.getSortCalendars(year, month, employeeid);
 
         return calendars
