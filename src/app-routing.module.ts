@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { RouterModule, Routes } from '@nestjs/core';
+import { CalendarModule } from './calendar/calendar.module';
 import { MenuModule } from './menu/menu.module';
 import { ProjectModule } from './project/project.module';
 import { ShareidModule } from './shareid/shareid.module';
 import { ShareinfoModule } from './shareinfo/shareinfo.module';
+import { EmployeeModule } from './employee/employee.module';
 
 const routes: Routes = [
     {
@@ -22,6 +24,15 @@ const routes: Routes = [
         path: 'shareinfo',
         module: ShareinfoModule
     },
+    {
+        path: 'calendar',
+        module: CalendarModule
+    },
+    {
+        path: 'employee',
+        module: EmployeeModule
+    },
+
     
 ];
 
@@ -31,7 +42,8 @@ const routes: Routes = [
         MenuModule,
         ProjectModule,
         ShareidModule,
-        ShareinfoModule
+        ShareinfoModule,
+        EmployeeModule
     ],
     exports: [RouterModule]
 })
